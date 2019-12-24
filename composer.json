@@ -1,0 +1,26 @@
+{
+    "name": "warmiak/laravel-ui",
+    "description": "Tailwind Preset for Laravel 6",
+    "require-dev": {
+        "laravel/ui": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "warmiak",
+            "email": "peter.wolkiewicz@orendo.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Warmiak\\LaravelUi\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Warmiak\\LaravelUi\\TailwindServiceProvider"
+            ]
+        }
+    }
+}
