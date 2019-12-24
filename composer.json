@@ -22,5 +22,7 @@
                 "Warmiak\\LaravelUi\\TailwindServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
