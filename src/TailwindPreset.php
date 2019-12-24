@@ -20,12 +20,15 @@ class TailwindPreset extends Preset
     public static function updatePackageArray($package)
     {
         return [
+            'axios' => '^0.19',
             'cross-env' => '^5.1',
             'laravel-mix' => '^4.0.7',
             'lodash' => '^4.17.13',
-            'axios' => '^0.19',
+            'sass' => '^1.24.0',
+            'sass-loader' => '^7.3.1',
+            'tailwindcss' => '^1.1.4',
             'vue' => '^2.5.7',
-            'tailwindcss' => '^1.1.4'
+            'vue-template-compiler' => '^2.6.11'
         ];
     }
 
