@@ -32,25 +32,25 @@ class TailwindPreset extends Preset
     public static function updateSassFolder()
     {
         File::cleanDirectory(resource_path('sass'));
-        File::copyDirectory('resources/sass', resource_path('sass'));
+        File::copyDirectory(__DIR__.'/resources/sass', resource_path('sass'));
     }
 
     public static function updateJsFolder()
     {
         File::cleanDirectory(resource_path('js'));
-        File::copyDirectory('resources/js', resource_path('js'));
+        File::copyDirectory(__DIR__.'/resources/js', resource_path('js'));
     }
 
     public static function updateViewsFolder()
     {
         File::cleanDirectory(resource_path('views'));
-        File::copyDirectory('resources/views', resource_path('views'));
+        File::copyDirectory(__DIR__.'/resources/views', resource_path('views'));
     }
 
     public static function copyTailwindConfigs()
     {
-        File::copy('resources/webpack.mix.js', base_path('webpack.mix.js'));
-        File::copy('resources/tailwind.config.js', base_path('tailwind.config.js'));
+        File::copy(__DIR__.'/resources/webpack.mix.js', base_path('webpack.mix.js'));
+        File::copy(__DIR__.'/resources/tailwind.config.js', base_path('tailwind.config.js'));
     }
 
 }
