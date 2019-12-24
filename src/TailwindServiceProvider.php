@@ -25,6 +25,7 @@ class TailwindServiceProvider extends ServiceProvider
     public function boot()
     {
         UiCommand::macro('tailwind', function ($command) {
+            TailwindPreset::install();
             $command->info('its working !.');
         });
     }
