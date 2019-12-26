@@ -16,6 +16,7 @@ class TailwindPreset extends Preset
         static::updateViewsFolder();
         static::copyTailwindConfigs();
         static::copyRoutesFile();
+        static::copyImagesFolder();
     }
 
     public static function updatePackageArray($package)

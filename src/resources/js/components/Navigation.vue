@@ -1,9 +1,9 @@
 <template>
 <div class="container mx-auto">
-    <div class="lg:flex lg:justify-between lg:items-center lg:py-6 lg:px-2">
+    <div class="lg:flex lg:justify-between lg:items-center lg:py-4 lg:px-2">
         <div class="flex items-center justify-between px-4 py-3 lg:p-0">
             <div>
-                <a href="/"><img class="h-8" src="/images/logo.png" alt="Logo"></a>
+                <a href="/"><img class="h-12" src="/images/logo.png" alt="Logo"></a>
             </div>
             <div class="lg:hidden">
                 <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-black focus:text-black focus:outline-none">

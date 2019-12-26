@@ -12,8 +12,10 @@
 */
 
 Route::view('/', 'welcome');
-Route::view('/admin', 'admin.dashboard');
-Route::view('/home', 'home')->name('home');
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function () {
+    Route::view('/admin', 'admin.dashboard')->name('dashboard');
+    Route::view('/home', 'home')->name('home');
+});
