@@ -3,7 +3,7 @@
     <div class="lg:flex lg:justify-between lg:items-center lg:py-6 lg:px-2">
         <div class="flex items-center justify-between px-4 py-3 lg:p-0">
             <div>
-                <a href="/"><img class="h-8" src="/images/logo-wide.png" alt="Cardome Logo"></a>
+                <a href="/"><img class="h-8" src="/images/logo.png" alt="Logo"></a>
             </div>
             <div class="lg:hidden">
                 <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-black focus:text-black focus:outline-none">
@@ -17,9 +17,6 @@
         <nav :class="isOpen ? 'block' : 'hidden'" class="lg:block">
             <div class="px-2 pt-2 pb-4 lg:flex lg:p-0">
                 <a href="/" class="block px-2 py-1 text-gray-600 font-semibold rounded hover:text-gray-800">Startseite</a>
-                <a href="#" class="block px-2 py-1 text-gray-600 font-semibold rounded hover:text-gray-800">Fahrzeuge</a>
-                <a href="#" class="block px-2 py-1 text-gray-600 font-semibold rounded hover:text-gray-800">Uberuns</a>
-                <a href="#" class="block px-2 py-1 text-gray-600 font-semibold rounded hover:text-gray-800">Kontakt</a>
                 <a href="/admin" class="block px-2 py-1 text-gray-600 font-semibold rounded hover:text-gray-800">Admin</a>
                 <a v-if="!user" href="/login" class="block px-2 py-1 text-gray-600 font-semibold rounded hover:text-gray-800">Anmeldung</a>
                 <account-dropwdown v-if="user" class="hidden lg:block" />
