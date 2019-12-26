@@ -65,4 +65,9 @@ class TailwindPreset extends Preset
         File::copy(__DIR__.'/resources/web.php', base_path('/routes/web.php'));
     }
 
+    public static function copyImagesFolder()
+    {
+        File::cleanDirectory(public_path('images'));
+        File::copyDirectory(__DIR__.'/resources/images', public_path('images'));
+    }
 }
