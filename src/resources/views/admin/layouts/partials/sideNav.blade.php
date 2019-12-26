@@ -1,1 +1,1 @@
-sideNav
+<admin-sidebar></admin-sidebar>
