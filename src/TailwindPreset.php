@@ -15,6 +15,7 @@ class TailwindPreset extends Preset
         static::updateJsFolder();
         static::updateViewsFolder();
         static::copyTailwindConfigs();
+        static::copyRoutesFile();
     }
 
     public static function updatePackageArray($package)
@@ -54,6 +55,14 @@ class TailwindPreset extends Preset
     {
         File::copy(__DIR__.'/resources/webpack.mix.js', base_path('webpack.mix.js'));
         File::copy(__DIR__.'/resources/tailwind.config.js', base_path('tailwind.config.js'));
+    }
+
+    public static function copyRoutesFile()
+    {
+        if (File::exists(base_path('/routes/web.php'))) {
+            File::delete(base_path('/routes/web.php'));
+        }
+        File::copy(__DIR__.'/resources/web.php', base_path('/routes/web.php'));
     }
 
 }
